@@ -1,0 +1,1 @@
+SELECT user.first_name,user.last_name, MAX(test_result.time_taken) as RecentTime,AVG(correct) AS averageCorrect FROM user LEFT JOIN test_result ON user.user_id = test_result.user_id GROUP BY first_name
